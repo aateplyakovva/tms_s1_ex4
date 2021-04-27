@@ -453,7 +453,6 @@ li:last-child {
 }
 
 .banner {
-  -ms-transform: translate(-50%, -50%);
   text-align: center;
   background-image: url(../img/bg.svg);
   background-repeat: no-repeat;
