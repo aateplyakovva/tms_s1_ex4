@@ -125,6 +125,7 @@ input {
   border-bottom: 1px solid #BDBDBD;
   outline: none;
 }
+
 input:focus~.form,
 input:valid~.form {
   top: -20px;
@@ -547,7 +548,8 @@ input:valid~.form {
   border-bottom: 1px solid #BDBDBD;
   outline: none;
 }
-.message{
+
+.message {
   height: 206px;
   font-size: 14px;
   display: block;
