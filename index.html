@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>:)</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -19,7 +20,7 @@
     <nav>
       <ul class="nav">
         <li><a href="#features">Feautures</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#awesome">About</a></li>
         <li><a href="#price">Pricing</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#contacts">Contact</a></li>
@@ -30,29 +31,28 @@
     <div class="front-text-content">
       <img src="img/AXIT.png" alt="">
       <div class="title-light-front">MODERN AXURE TEMPLATE FOR BEAUTIFUL PROTOTYPES</div>
-      <div class="front-separator"></div>
       <div class="span">Lorem ipsum dolor sit amet<br>consectetur, adipisicing elit. Aenean</div>
       <div class="wrapper-front-btn">
         <a class="btn" href="#">Download</a>
       </div>
     </div>
-    <div style="padding-left: 300px;">
-      <form class="form">
-        <div class="form_title">Try Your <font color="#EC7979">FREE</font> Trial Today</div>
+    <div class="form-container">
+      <div class="form_title">Try Your <font color="#EC7979">FREE</font> Trial Today</div>
+      <form class="front-form">
         <div class="form_group">
-          <input class="form_input" placeholder=" ">
-          <label class="form_label">Name</label>
+          <input type="text" required>
+          <label class="form">Name</label>
         </div>
         <div class="form_group">
-          <input class="form_input" placeholder=" ">
-          <label class="form_label">Email</label>
+          <input type="text" required>
+          <label class="form">Email</label>
         </div>
         <div class="form_group">
-          <input class="form_input" placeholder=" ">
-          <label class="form_label">Password</label>
+          <input type="text" required>
+          <label class="form">Password</label>
         </div>
-        <button class="form_button">Get Started</button>
       </form>
+      <button class="form_button">Get Started</button>
     </div>
   </section>
   <section class="social">
@@ -63,32 +63,48 @@
     </div>
     <img src="img/social.svg" alt="">
   </section>
-  <section id="awesome">
-    <div class="tabs">
-      <div class="tabs-wrapper">
-        <input class="input" type="radio" name="tabs" id="tab-1" checked />
-        <input class="input" type="radio" name="tabs" id="tab-2" />
-        <input class="input" type="radio" name="tabs" id="tab-3" />
-        <label class="tab" for="tab-1">TAB 1</label>
-        <label class="tab" for="tab-2">TAB 2</label>
-        <label class="tab" for="tab-3">TAB 3</label>
-      </div>
-      <div class="titledesc">
-        <div class="tabs-title"><a id="features">Tabs with soft transitioning effect.</a></div>
-        <div class="tabs-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod<br>bibendum
-          laoreet. Proin gravida dolor sit amet lacus accumsan et viverra<br>justo commodo. Proin sodales pulvinar
-          tempor. Cum sociis natoque<br>penatibus et magnis dis parturient montes.<p>Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Aenean euismod
-            bibendum laoreet.</p>
-        </div>
-        <div class="wrapper-tab-btn">
-          <a class="tab-btn" href="#">Download</a>
-        </div>
-      </div>
-      <img src="img/town.svg" alt="">
+  <section id="features">
+    <div class="tabs-wrapper">
+      <input class="input" type="radio" name="tabs" id="tab-1" checked="">
+      <input class="input" type="radio" name="tabs" id="tab-2">
+      <input class="input" type="radio" name="tabs" id="tab-3">
+      <label class="tab" for="tab-1">TAB 1</label>
+      <label class="tab" for="tab-2">TAB 2</label>
+      <label class="tab" for="tab-3">TAB 3</label>
     </div>
-    <div class="title-dark"><a id="about">WHY THIS IS AWESOME</a></div>
-    <div class="hr"></div>
+    <div class="titledesc">
+      <div class="tabs-title">Tabs with soft transitioning effect.</div>
+      <div class="tabs-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod<br>bibendum
+        laoreet. Proin gravida dolor sit amet lacus accumsan et viverra<br>justo commodo. Proin sodales pulvinar
+        tempor. Cum sociis natoque<br>penatibus et magnis dis parturient montes.<p>Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Aenean euismod
+          bibendum laoreet.</p>
+      </div>
+      <div class="wrapper-tab-btn">
+        <a class="tab-btn" href="#">Download</a>
+      </div>
+    </div>
+    <img src="img/town.svg" alt="">
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section id="awesome">
+    <div class="title-dark">WHY THIS IS AWESOME</div>
     <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
     </div>
     <div class="catalog">
@@ -124,9 +140,8 @@
       </div>
     </div>
   </section>
-  <section class="pricing">
-    <div class="title-dark"><a id="price">PRICING OPTIONS</a></div>
-    <div class="hr"></div>
+  <section id="price">
+    <div class="title-dark">PRICING OPTIONS</div>
     <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
     <div class="price-container">
       <div class="pricing-plan">
@@ -176,17 +191,16 @@
       </div>
     </div>
   </section>
-  <section class="feedbacks">
-    <div class="title-dark"><a id="reviews">what our customers are saying</a></div>
-    <div class="hr"></div>
+  <section id="reviews">
+    <div class="title-dark">what our customers are saying</div>
     <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-    <div class="reviews">
+    <div class="feedbacks">
       <div class="feedback">
         <div class="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita
           repellat similique odio aspernatur ex, architecto eaque quo suscipit.</div>
         <div class="person">
           <img src="img/ava.svg" alt="">
-          <div>
+          <div class="name-post">
             <div class="name">Jeremy H.</div>
             <div class="post">Manager</div>
           </div>
@@ -215,55 +229,47 @@
         </div>
       </div>
     </div>
-
-
-
-
   </section>
-  <section>
-    <div class="banner">
-      <div class="title-light">STYLISH AXURE DESIGN</div>
-      <div class="separator"></div>
-      <div class="descr">
-        <span>Use the sections you need, remove the ones you don't. Create gorgeous prototypes faster than ever!</span>
-      </div>
-      <div class="wrapper-btn">
-        <a class="btn" href="#">Download</a>
-      </div>
+  <section class="banner">
+    <div class="title-light">STYLISH AXURE DESIGN</div>
+    <div class="descr">
+      <span>Use the sections you need, remove the ones you don't. Create gorgeous prototypes faster than ever!</span>
+    </div>
+    <div class="wrapper-btn">
+      <a class="btn" href="#">Download</a>
     </div>
   </section>
-  <section class="contact">
-    <div class="title-dark"><a id="contacts">contact us</a></div>
-    <div class="hr"></div>
+  <section id="contacts">
+    <div class="title-dark">contact us</div>
     <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-    <div class="contact-form">
-      <div class="nep">
-        <div class="form-contact">
-          <input class="form-input-contact" placeholder=" ">
-          <label class="form-label-contact">Name</label>
-        </div>
-        <div class="form-contact">
-          <input class="form-input-contact" placeholder=" ">
-          <label class="form-label-contact">Email</label>
-        </div>
-        <div class="form-contact">
-          <input class="form-input-contact" placeholder=" ">
-          <label class="form-label-contact">Password</label>
-        </div>
-      </div>
-      <div class="password">
+    <div class="contact-form-container">
+      <form class="contact">
         <div class="form_group">
-          <input class="form-contact-message" placeholder=" ">
-          <label class="form-label-contact">Message</label>
+          <input type="text" required class="nep">
+          <label class="form">Name</label>
         </div>
-      </div>
+        <div class="form_group">
+          <input type="text" required class="nep">
+          <label class="form">Email</label>
+        </div>
+        <div class="form_group">
+          <input type="text" required class="nep">
+          <label class="form">Password</label>
+        </div>
+      </form>
+      <form class="message">
+        <div class="form_group">
+          <input type="text" required class="message">
+          <label class="form">Message</label>
+        </div>
+      </form>
     </div>
+
+
     <div class="wrapper-btn">
       <a class="tab-btn" href="#">Send Message</a>
     </div>
   </section>
-
-
   <footer>
     <div class="footer-item">
       <img src="img/social.svg" alt="">

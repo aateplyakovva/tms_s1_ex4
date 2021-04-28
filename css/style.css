@@ -58,7 +58,8 @@ li:last-child {
   line-height: 42px;
 }
 
-.front-separator::after {
+.title-light-front::after {
+  margin-top: 30px;
   display: block;
   content: "";
   width: 64px;
@@ -74,18 +75,61 @@ li:last-child {
   font-size: 16px;
 }
 
-.form {
+.form-container {
+  box-sizing: border-box;
+  margin: 30px 0 0 240px;
+  font-family: Open Sans;
+  display: block;
+  background: #FFF;
   color: #000000;
   border-radius: 8px;
-  background: #FFFFFF;
-  font-family: Open Sans;
   text-align: center;
 }
 
-.form_input {
+.form_title {
+  padding-top: 10px;
+  margin-bottom: 44px;
   font-family: Open Sans;
-  font-size: 14px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.front-form {
+  padding: 0 59px 0 59px;
+}
+
+.form {
+  position: absolute;
   color: #BDBDBD;
+  font-size: 16px;
+  font-weight: 400;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.form_group {
+  position: relative;
+  margin-bottom: 38px;
+}
+
+input {
+  font-size: 14px;
+  padding-bottom: 19px;
+  display: block;
+  width: 237px;
+  border: none;
+  border-bottom: 1px solid #BDBDBD;
+  outline: none;
+}
+input:focus~.form,
+input:valid~.form {
+  top: -20px;
+  font-size: 14px;
+  font-family: Open Sans;
 }
 
 .form_button {
@@ -99,67 +143,32 @@ li:last-child {
   width: 370px;
   height: 54px;
   outline: none;
+  transition: 1.0s ease;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .form_button:focus,
 .form_button:hover {
   background-color: #fff;
   color: #EC7979;
-  transition: 0.5s ease;
 }
 
-.form_title {
-  margin-bottom: 44px;
-  font-family: Open Sans;
-  font-weight: 700;
-  font-size: 20px;
-}
 
-.form_group {
-  position: relative;
-  margin-bottom: 38px;
-}
 
-.form_label {
-  padding-left: 62px;
-  position: absolute;
-  left: 0;
-  color: #BDBDBD;
-  transition: 0.3s;
-}
-
-.form_input {
-  width: 65%;
-  padding-bottom: 19px;
-  padding: 0 0 19px 0;
-  border: none;
-  border-bottom: 1px solid #BDBDBD;
-  outline: none;
-  transition: 0.3s;
-}
-
-.form_input:focus~.form_label,
-.form_input:not(:placeholder-shown)~.form_label {
-  top: -18px;
-  font-size: 12px;
-  color: #000000;
-}
-
-.form_input:focus {
-  border-bottom: 1px solid #000000;
-}
 
 .social {
-  padding: 0 100px;
+  padding: 30px 100px;
   align-items: center;
-  height: 130px;
   display: flex;
   background-color: #F8EFEF;
 }
 
+.socialMedia {
+  width: 70%;
+}
+
 .social p {
+  margin-top: 0;
   font-family: Open Sans;
   font-weight: 700;
   font-size: 20px;
@@ -174,6 +183,12 @@ li:last-child {
 
 #awesome {
   text-align: center;
+}
+
+#features {
+  padding: 100px;
+  justify-content: space-between;
+  display: flex;
 }
 
 .tabs {
@@ -262,18 +277,20 @@ li:last-child {
   height: 253px;
 }
 
+
+
+
 .title-dark {
-  padding: 100px 0 25px 0;
   font-family: Raleway;
   font-size: 36px;
   color: #212121;
   text-transform: uppercase;
 }
 
-.hr::after {
+.title-dark::after {
+  margin: 30px auto;
   display: block;
   content: "";
-  margin: 0 auto;
   width: 64px;
   border: 1px solid #E72424;
   background-color: #E72424;
@@ -332,11 +349,10 @@ li:last-child {
   padding: 16px 0 116px 0;
 }
 
-.pricing {
-  padding: 0 100px;
+#price {
+  padding: 100px;
   text-align: center;
   background-color: #F5F5F5;
-  height: 800px;
 }
 
 .price-container {
@@ -345,7 +361,7 @@ li:last-child {
 }
 
 .pricing-plan {
-  margin: 0px 20px;
+  margin: 0 20px;
   width: 340px;
   background-color: #fff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
@@ -408,12 +424,12 @@ li:last-child {
   border-top: 2px solid #F5F5F5;
 }
 
-.feedbacks {
-  padding: 0 100px;
+#reviews {
+  padding: 100px;
   text-align: center;
 }
 
-.reviews {
+.feedbacks {
   display: flex;
   justify-content: space-between;
 }
@@ -430,7 +446,7 @@ li:last-child {
 }
 
 .person {
-  padding: 22px 0 119px 0;
+  padding-top: 22px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -463,17 +479,17 @@ li:last-child {
 }
 
 .title-light {
-  padding: 65px 0 45px 0;
+  padding-top: 65px;
   font-family: Raleway;
   font-size: 36px;
   text-transform: uppercase;
 }
 
-.separator::after {
+.title-light::after {
+  margin: 30px auto;
   background-color: #fff;
   display: block;
   content: "";
-  margin: 0 auto;
   width: 64px;
   border: 1px solid #FFFFFF;
 }
@@ -509,79 +525,42 @@ li:last-child {
   transition: 0.5s ease;
 }
 
-.contact {
-  padding: 0 100px;
+#contacts {
+  padding: 100px 100px 0 100px;
   text-align: center;
 }
 
-.contact-form {
-  padding-top: 91px;
+.contact-form-container {
+  font-family: Open Sans;
   display: flex;
   justify-content: space-between;
 }
 
+.contact {
+  padding-right: 210px;
+}
+
 .nep {
-  padding-right: 215px;
-}
-
-.form-contact {
-  margin-bottom: 68px;
-  position: relative;
-}
-
-.form-input-contact {
-  font-family: Open Sans;
-  font-size: 14px;
-  color: #BDBDBD;
-  width: 478px;
   padding-bottom: 32px;
+  width: 478px;
   border: none;
   border-bottom: 1px solid #BDBDBD;
   outline: none;
-  transition: 0.3s;
 }
-
-.form-label-contact {
-  position: absolute;
-  left: 0;
-  color: #BDBDBD;
-  transition: 0.3s;
-}
-
-.form-input-contact:focus~.form-label-contact,
-.form-input-contact:not(:placeholder-shown)~.form-label-contact {
-  top: -18px;
-  font-size: 12px;
-  color: #000000;
-}
-
-.form-input-contact:focus {
-  border-bottom: 1px solid #000000;
-}
-
-.form-contact-message {
-  font-family: Open Sans;
+.message{
+  height: 206px;
   font-size: 14px;
-  line-height: 19px;
-  color: #BDBDBD;
-  width: 410px;
-  padding-bottom: 270px;
+  display: block;
+  width: 478px;
   border: none;
   border-bottom: 1px solid #BDBDBD;
   outline: none;
-  transition: 0.3s;
 }
 
-.form-contact-message:focus~.form-label-contact,
-.form-contact-message:not(:placeholder-shown)~.form_label2 {
-  top: -18px;
-  font-size: 12px;
-  color: #000000;
-}
 
-.form-contact-message:focus {
-  border-bottom: 1px solid #000000;
-}
+
+
+
 
 footer {
   background-color: #000000;
@@ -606,5 +585,6 @@ footer {
 }
 
 .social img {
+  cursor: pointer;
   height: 42px;
 }
